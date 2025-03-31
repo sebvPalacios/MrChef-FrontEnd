@@ -1,0 +1,16 @@
+#titulo{
+    text-align: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+/* Descripcion */
+#descripcion_receta {
+    text-align: justify;
+}
+
+#boton{
+    background-color: black;
+    border: 1px solid black;
+}

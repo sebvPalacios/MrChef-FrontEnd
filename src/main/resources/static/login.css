@@ -1,0 +1,27 @@
+body{
+    background-color:#eaecee; 
+}
+
+#frmInicioSesion {
+    border: 2px solid black;
+    border-radius: 0px;
+    min-width: 450px;
+    max-width: 450px;
+    padding: 30px 40px 20px 40px;
+}
+
+#titulo{
+    text-align: center;
+    font-style: italic;
+}
+
+#username, #password {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#btnSignIn {
+    width: 100%;
+    background-color: black;
+    border: 1px solid black;
+}
