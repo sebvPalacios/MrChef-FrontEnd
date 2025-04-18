@@ -64,4 +64,23 @@ public class HomeController {
         model.addAttribute("name", response.getBody());
         return "Detalles";
     }
+
+    @PostMapping("/recetas/crear")
+    public String crearReceta(@ModelAttribute RecetaDTO receta, Model model) {
+        String url = "http://localhost:8080/recetas/crear";
+        final var restTemplate = new RestTemplate();
+        String token = tokenStore.getToken();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization", token);
+        headers.set("Content-Type", "application/json");
+
+        HttpEntity<RecetaDTO> entity = new HttpEntity<>(receta, headers);
+
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
+
+        model.addAttribute("message", response.getBody());
+        return "Resultado"; // Vista que muestra el mensaje
+    }
+
 }

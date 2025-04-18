@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Receta</title>
+    <link rel="stylesheet" type="text/css" href="/receta.css">
+</head>
+<body>
+    <h1>Crear Nueva Receta</h1>
+
+    <form th:action="@{/recetas/crear}" method="post">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="ingredientes">Ingredientes:</label><br>
+        <textarea id="ingredientes" name="ingredientes" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="pasos">Pasos:</label><br>
+        <textarea id="pasos" name="pasos" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Crear Receta</button>
+    </form>
+
+    <br>
+    <a th:href="@{/home}">Volver al Home</a>
+</body>
+</html>
